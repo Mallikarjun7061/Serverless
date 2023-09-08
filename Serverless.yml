@@ -1,0 +1,51 @@
+service: my-serverless-service
+provider:
+  name: aws
+  runtime: nodejs14.x
+  
+functions:
+
+  createPost:
+    handler: Create.create
+    
+    events:
+
+      - http:
+
+          path: create
+
+          method: POST
+
+  readpost:
+    handler: Read.read
+    
+    events:
+
+      - http:
+
+          path: post/{Postid}
+
+          method: GET
+
+  Updatepost:
+    handler: Update.update
+    
+    events:
+
+      - http:
+
+          path: post/{Postid}
+
+          method: PUT       
+
+
+  Deletepost:
+    handler: Delete.delete
+    
+    events:
+
+      - http:
+
+          path: post/{Postid}
+
+          method: DELETE        

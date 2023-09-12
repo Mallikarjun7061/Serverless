@@ -1,8 +1,8 @@
 {
   "service": {
-    "service": "my-serverless-service",
+    "service": "Task",
     "serviceObject": {
-      "name": "my-serverless-service"
+      "name": "Task"
     },
     "provider": {
       "name": "aws",
@@ -86,25 +86,25 @@
           "CreatePostLogGroup": {
             "Type": "AWS::Logs::LogGroup",
             "Properties": {
-              "LogGroupName": "/aws/lambda/my-serverless-service-dev-createPost"
+              "LogGroupName": "/aws/lambda/Task-dev-createPost"
             }
           },
           "ReadpostLogGroup": {
             "Type": "AWS::Logs::LogGroup",
             "Properties": {
-              "LogGroupName": "/aws/lambda/my-serverless-service-dev-readpost"
+              "LogGroupName": "/aws/lambda/Task-dev-readpost"
             }
           },
           "UpdatepostLogGroup": {
             "Type": "AWS::Logs::LogGroup",
             "Properties": {
-              "LogGroupName": "/aws/lambda/my-serverless-service-dev-Updatepost"
+              "LogGroupName": "/aws/lambda/Task-dev-Updatepost"
             }
           },
           "DeletepostLogGroup": {
             "Type": "AWS::Logs::LogGroup",
             "Properties": {
-              "LogGroupName": "/aws/lambda/my-serverless-service-dev-Deletepost"
+              "LogGroupName": "/aws/lambda/Task-dev-Deletepost"
             }
           },
           "IamRoleLambdaExecution": {
@@ -132,7 +132,7 @@
                     "Fn::Join": [
                       "-",
                       [
-                        "my-serverless-service",
+                        "Task",
                         "dev",
                         "lambda"
                       ]
@@ -150,7 +150,7 @@
                         ],
                         "Resource": [
                           {
-                            "Fn::Sub": "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/my-serverless-service-dev*:*"
+                            "Fn::Sub": "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/Task-dev*:*"
                           }
                         ]
                       },
@@ -161,7 +161,7 @@
                         ],
                         "Resource": [
                           {
-                            "Fn::Sub": "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/my-serverless-service-dev*:*:*"
+                            "Fn::Sub": "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/Task-dev*:*:*"
                           }
                         ]
                       }
@@ -174,7 +174,7 @@
                 "Fn::Join": [
                   "-",
                   [
-                    "my-serverless-service",
+                    "Task",
                     "dev",
                     {
                       "Ref": "AWS::Region"
@@ -192,11 +192,11 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/my-serverless-service/dev/1694177230331-2023-09-08T12:47:10.331Z/my-serverless-service.zip"
+                "S3Key": "serverless/Task/dev/1694417098026-2023-09-11T07:24:58.026Z/Task.zip"
               },
               "Handler": "Create.create",
               "Runtime": "nodejs14.x",
-              "FunctionName": "my-serverless-service-dev-createPost",
+              "FunctionName": "Task-dev-createPost",
               "MemorySize": 1024,
               "Timeout": 6,
               "Role": {
@@ -217,11 +217,11 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/my-serverless-service/dev/1694177230331-2023-09-08T12:47:10.331Z/my-serverless-service.zip"
+                "S3Key": "serverless/Task/dev/1694417098026-2023-09-11T07:24:58.026Z/Task.zip"
               },
               "Handler": "Read.read",
               "Runtime": "nodejs14.x",
-              "FunctionName": "my-serverless-service-dev-readpost",
+              "FunctionName": "Task-dev-readpost",
               "MemorySize": 1024,
               "Timeout": 6,
               "Role": {
@@ -242,11 +242,11 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/my-serverless-service/dev/1694177230331-2023-09-08T12:47:10.331Z/my-serverless-service.zip"
+                "S3Key": "serverless/Task/dev/1694417098026-2023-09-11T07:24:58.026Z/Task.zip"
               },
               "Handler": "Update.update",
               "Runtime": "nodejs14.x",
-              "FunctionName": "my-serverless-service-dev-Updatepost",
+              "FunctionName": "Task-dev-Updatepost",
               "MemorySize": 1024,
               "Timeout": 6,
               "Role": {
@@ -267,11 +267,11 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/my-serverless-service/dev/1694177230331-2023-09-08T12:47:10.331Z/my-serverless-service.zip"
+                "S3Key": "serverless/Task/dev/1694417098026-2023-09-11T07:24:58.026Z/Task.zip"
               },
               "Handler": "Delete.delete",
               "Runtime": "nodejs14.x",
-              "FunctionName": "my-serverless-service-dev-Deletepost",
+              "FunctionName": "Task-dev-Deletepost",
               "MemorySize": 1024,
               "Timeout": 6,
               "Role": {
@@ -285,50 +285,50 @@
               "DeletepostLogGroup"
             ]
           },
-          "CreatePostLambdaVersionLBMLNqbvQCpwWfnTeePo9qp5v7vyfedUUDwRAMcnQ": {
+          "CreatePostLambdaVersion0IGMO4AtssrgCCS4fB0al3S9Z5xIVHgmwV9CEm11kQ": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "CreatePostLambdaFunction"
               },
-              "CodeSha256": "gYuKUbuXgZb4WQJ6c048V8l7+Qhj8V5THWCqWh52jK0="
+              "CodeSha256": "sCpHPfidkgdtaFU8dpj2Vot8KM0vAxLGjeIQ1lSSgAQ="
             }
           },
-          "ReadpostLambdaVersionNJmB5SLAPs1VYWKZ4UvwLRXMMWPbuIlqNyt2Hocko": {
+          "ReadpostLambdaVersionKAmM1h1PDF7lYWRhbiNRLeQX2qzFmHe7wbMGGy6dY": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "ReadpostLambdaFunction"
               },
-              "CodeSha256": "gYuKUbuXgZb4WQJ6c048V8l7+Qhj8V5THWCqWh52jK0="
+              "CodeSha256": "sCpHPfidkgdtaFU8dpj2Vot8KM0vAxLGjeIQ1lSSgAQ="
             }
           },
-          "UpdatepostLambdaVersion7Kdc9nWNs6hESKiWNuvJiOd89cEnEVdSYIh7LoCaZ2U": {
+          "UpdatepostLambdaVersionfVRUxUMeMwZ34Cr3KzwF6rF8MWxkss8klrpHD5nEo": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "UpdatepostLambdaFunction"
               },
-              "CodeSha256": "gYuKUbuXgZb4WQJ6c048V8l7+Qhj8V5THWCqWh52jK0="
+              "CodeSha256": "sCpHPfidkgdtaFU8dpj2Vot8KM0vAxLGjeIQ1lSSgAQ="
             }
           },
-          "DeletepostLambdaVersionQijpqs6uazhrOBCXeY7LoVZZW4CjO5brwalnABOSQsU": {
+          "DeletepostLambdaVersionguhYWuOby8PH0gW5NbnMb7cQxG6rQYH8hVvm2qnUYLw": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "DeletepostLambdaFunction"
               },
-              "CodeSha256": "gYuKUbuXgZb4WQJ6c048V8l7+Qhj8V5THWCqWh52jK0="
+              "CodeSha256": "sCpHPfidkgdtaFU8dpj2Vot8KM0vAxLGjeIQ1lSSgAQ="
             }
           },
           "ApiGatewayRestApi": {
             "Type": "AWS::ApiGateway::RestApi",
             "Properties": {
-              "Name": "dev-my-serverless-service",
+              "Name": "dev-Task",
               "EndpointConfiguration": {
                 "Types": [
                   "EDGE"
@@ -374,6 +374,36 @@
                 "Ref": "ApiGatewayResourcePost"
               },
               "PathPart": "{Postid}",
+              "RestApiId": {
+                "Ref": "ApiGatewayRestApi"
+              }
+            }
+          },
+          "ApiGatewayResourceUpdate": {
+            "Type": "AWS::ApiGateway::Resource",
+            "Properties": {
+              "ParentId": {
+                "Fn::GetAtt": [
+                  "ApiGatewayRestApi",
+                  "RootResourceId"
+                ]
+              },
+              "PathPart": "Update",
+              "RestApiId": {
+                "Ref": "ApiGatewayRestApi"
+              }
+            }
+          },
+          "ApiGatewayResourceDelete": {
+            "Type": "AWS::ApiGateway::Resource",
+            "Properties": {
+              "ParentId": {
+                "Fn::GetAtt": [
+                  "ApiGatewayRestApi",
+                  "RootResourceId"
+                ]
+              },
+              "PathPart": "Delete",
               "RestApiId": {
                 "Ref": "ApiGatewayRestApi"
               }
@@ -471,13 +501,13 @@
               "ReadpostLambdaPermissionApiGateway"
             ]
           },
-          "ApiGatewayMethodPostPostidVarPut": {
+          "ApiGatewayMethodUpdatePut": {
             "Type": "AWS::ApiGateway::Method",
             "Properties": {
               "HttpMethod": "PUT",
               "RequestParameters": {},
               "ResourceId": {
-                "Ref": "ApiGatewayResourcePostPostidVar"
+                "Ref": "ApiGatewayResourceUpdate"
               },
               "RestApiId": {
                 "Ref": "ApiGatewayRestApi"
@@ -517,13 +547,13 @@
               "UpdatepostLambdaPermissionApiGateway"
             ]
           },
-          "ApiGatewayMethodPostPostidVarDelete": {
+          "ApiGatewayMethodDeleteDelete": {
             "Type": "AWS::ApiGateway::Method",
             "Properties": {
               "HttpMethod": "DELETE",
               "RequestParameters": {},
               "ResourceId": {
-                "Ref": "ApiGatewayResourcePostPostidVar"
+                "Ref": "ApiGatewayResourceDelete"
               },
               "RestApiId": {
                 "Ref": "ApiGatewayRestApi"
@@ -563,7 +593,7 @@
               "DeletepostLambdaPermissionApiGateway"
             ]
           },
-          "ApiGatewayDeployment1694177228887": {
+          "ApiGatewayDeployment1694417096676": {
             "Type": "AWS::ApiGateway::Deployment",
             "Properties": {
               "RestApiId": {
@@ -574,8 +604,8 @@
             "DependsOn": [
               "ApiGatewayMethodCreatePost",
               "ApiGatewayMethodPostPostidVarGet",
-              "ApiGatewayMethodPostPostidVarPut",
-              "ApiGatewayMethodPostPostidVarDelete"
+              "ApiGatewayMethodUpdatePut",
+              "ApiGatewayMethodDeleteDelete"
             ]
           },
           "CreatePostLambdaPermissionApiGateway": {
@@ -733,43 +763,43 @@
               "Ref": "ServerlessDeploymentBucket"
             },
             "Export": {
-              "Name": "sls-my-serverless-service-dev-ServerlessDeploymentBucketName"
+              "Name": "sls-Task-dev-ServerlessDeploymentBucketName"
             }
           },
           "CreatePostLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "CreatePostLambdaVersionLBMLNqbvQCpwWfnTeePo9qp5v7vyfedUUDwRAMcnQ"
+              "Ref": "CreatePostLambdaVersion0IGMO4AtssrgCCS4fB0al3S9Z5xIVHgmwV9CEm11kQ"
             },
             "Export": {
-              "Name": "sls-my-serverless-service-dev-CreatePostLambdaFunctionQualifiedArn"
+              "Name": "sls-Task-dev-CreatePostLambdaFunctionQualifiedArn"
             }
           },
           "ReadpostLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "ReadpostLambdaVersionNJmB5SLAPs1VYWKZ4UvwLRXMMWPbuIlqNyt2Hocko"
+              "Ref": "ReadpostLambdaVersionKAmM1h1PDF7lYWRhbiNRLeQX2qzFmHe7wbMGGy6dY"
             },
             "Export": {
-              "Name": "sls-my-serverless-service-dev-ReadpostLambdaFunctionQualifiedArn"
+              "Name": "sls-Task-dev-ReadpostLambdaFunctionQualifiedArn"
             }
           },
           "UpdatepostLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "UpdatepostLambdaVersion7Kdc9nWNs6hESKiWNuvJiOd89cEnEVdSYIh7LoCaZ2U"
+              "Ref": "UpdatepostLambdaVersionfVRUxUMeMwZ34Cr3KzwF6rF8MWxkss8klrpHD5nEo"
             },
             "Export": {
-              "Name": "sls-my-serverless-service-dev-UpdatepostLambdaFunctionQualifiedArn"
+              "Name": "sls-Task-dev-UpdatepostLambdaFunctionQualifiedArn"
             }
           },
           "DeletepostLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "DeletepostLambdaVersionQijpqs6uazhrOBCXeY7LoVZZW4CjO5brwalnABOSQsU"
+              "Ref": "DeletepostLambdaVersionguhYWuOby8PH0gW5NbnMb7cQxG6rQYH8hVvm2qnUYLw"
             },
             "Export": {
-              "Name": "sls-my-serverless-service-dev-DeletepostLambdaFunctionQualifiedArn"
+              "Name": "sls-Task-dev-DeletepostLambdaFunctionQualifiedArn"
             }
           },
           "ServiceEndpoint": {
@@ -795,7 +825,7 @@
               ]
             },
             "Export": {
-              "Name": "sls-my-serverless-service-dev-ServiceEndpoint"
+              "Name": "sls-Task-dev-ServiceEndpoint"
             }
           }
         }
@@ -897,13 +927,13 @@
             }
           }
         ],
-        "name": "my-serverless-service-dev-createPost",
+        "name": "Task-dev-createPost",
         "package": {},
         "memory": 1024,
         "timeout": 6,
         "runtime": "nodejs14.x",
         "vpc": {},
-        "versionLogicalId": "CreatePostLambdaVersionLBMLNqbvQCpwWfnTeePo9qp5v7vyfedUUDwRAMcnQ"
+        "versionLogicalId": "CreatePostLambdaVersion0IGMO4AtssrgCCS4fB0al3S9Z5xIVHgmwV9CEm11kQ"
       },
       "readpost": {
         "handler": "Read.read",
@@ -916,57 +946,57 @@
             }
           }
         ],
-        "name": "my-serverless-service-dev-readpost",
+        "name": "Task-dev-readpost",
         "package": {},
         "memory": 1024,
         "timeout": 6,
         "runtime": "nodejs14.x",
         "vpc": {},
-        "versionLogicalId": "ReadpostLambdaVersionNJmB5SLAPs1VYWKZ4UvwLRXMMWPbuIlqNyt2Hocko"
+        "versionLogicalId": "ReadpostLambdaVersionKAmM1h1PDF7lYWRhbiNRLeQX2qzFmHe7wbMGGy6dY"
       },
       "Updatepost": {
         "handler": "Update.update",
         "events": [
           {
             "http": {
-              "path": "post/{Postid}",
+              "path": "Update",
               "method": "put",
               "integration": "AWS_PROXY"
             }
           }
         ],
-        "name": "my-serverless-service-dev-Updatepost",
+        "name": "Task-dev-Updatepost",
         "package": {},
         "memory": 1024,
         "timeout": 6,
         "runtime": "nodejs14.x",
         "vpc": {},
-        "versionLogicalId": "UpdatepostLambdaVersion7Kdc9nWNs6hESKiWNuvJiOd89cEnEVdSYIh7LoCaZ2U"
+        "versionLogicalId": "UpdatepostLambdaVersionfVRUxUMeMwZ34Cr3KzwF6rF8MWxkss8klrpHD5nEo"
       },
       "Deletepost": {
         "handler": "Delete.delete",
         "events": [
           {
             "http": {
-              "path": "post/{Postid}",
+              "path": "Delete",
               "method": "delete",
               "integration": "AWS_PROXY"
             }
           }
         ],
-        "name": "my-serverless-service-dev-Deletepost",
+        "name": "Task-dev-Deletepost",
         "package": {},
         "memory": 1024,
         "timeout": 6,
         "runtime": "nodejs14.x",
         "vpc": {},
-        "versionLogicalId": "DeletepostLambdaVersionQijpqs6uazhrOBCXeY7LoVZZW4CjO5brwalnABOSQsU"
+        "versionLogicalId": "DeletepostLambdaVersionguhYWuOby8PH0gW5NbnMb7cQxG6rQYH8hVvm2qnUYLw"
       }
     },
     "configValidationMode": "warn",
     "serviceFilename": "serverless.yml",
     "initialServerlessConfig": {
-      "service": "my-serverless-service",
+      "service": "Task",
       "provider": {
         "$ref": "$[\"service\"][\"provider\"]"
       },
@@ -976,10 +1006,10 @@
     },
     "layers": {},
     "isDashboardMonitoringPreconfigured": false,
-    "artifact": "C:\\Users\\mwarad\\Desktop\\Task2\\.serverless\\my-serverless-service.zip"
+    "artifact": "C:\\Users\\mwarad\\Desktop\\Task2\\.serverless\\Task.zip"
   },
   "package": {
-    "artifactDirectoryName": "serverless/my-serverless-service/dev/1694177230331-2023-09-08T12:47:10.331Z",
-    "artifact": "my-serverless-service.zip"
+    "artifactDirectoryName": "serverless/Task/dev/1694417098026-2023-09-11T07:24:58.026Z",
+    "artifact": "Task.zip"
   }
 }

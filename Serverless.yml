@@ -1,4 +1,4 @@
-service: my-serverless-service
+service: Task
 provider:
   name: aws
   runtime: nodejs14.x
@@ -34,7 +34,7 @@ functions:
 
       - http:
 
-          path: post/{Postid}
+          path: Update
 
           method: PUT       
 
@@ -46,6 +46,6 @@ functions:
 
       - http:
 
-          path: post/{Postid}
+          path: Delete
 
           method: DELETE        

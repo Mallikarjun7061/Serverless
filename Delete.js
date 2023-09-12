@@ -2,11 +2,12 @@ const AWS = require("aws-sdk");
 
 const docClient = new AWS.DynamoDB.DocumentClient();
 module.exports.delete = async (event) => {
+    const data2 = JSON.parse(event.body);
     try {
       const params = {
         TableName: "Blogposts",
         Key: {
-          postId: event.postid,
+          postId: data2.postid,
         },
       };
   

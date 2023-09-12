@@ -3,6 +3,7 @@ const AWS = require("aws-sdk");
 const docClient = new AWS.DynamoDB.DocumentClient();
 
 module.exports.create = async (event) => {
+    const data = JSON.parse(event.body);
   try {
     // Define the DynamoDB parameters for putting an item
 
@@ -10,10 +11,10 @@ module.exports.create = async (event) => {
       TableName: "Blogposts", // Replace with your DynamoDB table name
 
       Item: {
-        postId: event.postid,
-        Author: event.author,
-        Content: event.content,
-        Title: event.tilte
+        postId: data.postid,
+        Author: data.author,
+        Content: data.content,
+        Title: data.title
       },
     };
 

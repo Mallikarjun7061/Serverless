@@ -2,17 +2,18 @@ const AWS = require("aws-sdk");
 
 const docClient = new AWS.DynamoDB.DocumentClient();
 module.exports.update = async (event) => {
+    const data1 = JSON.parse(event.body);
     try {
       const params = {
         TableName: "Blogposts",
         Key: {
-          postId: event.postid,
+          postId: data1.postid,
         },
         UpdateExpression: "set Author = :author, Content = :content, Title = :title",
         ExpressionAttributeValues: {
-          ":author": event.author,
-          ":content": event.content,
-          ":title": event.title,
+          ":author": data1.author,
+          ":content": data1.content,
+          ":title": data1.title,
         },
         ReturnValues: "UPDATED_NEW",
       };

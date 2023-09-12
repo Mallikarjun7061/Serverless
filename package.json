@@ -1,0 +1,22 @@
+{
+  "name": "task2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "Create.js",
+  "scripts": {
+    "test": "mocha './Create.test.js'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mallikarjun7061/TASK.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Mallikarjun7061/TASK/issues"
+  },
+  "homepage": "https://github.com/Mallikarjun7061/TASK#readme",
+  "devDependencies": {
+    "sinon": "^15.2.0"
+  }
+}

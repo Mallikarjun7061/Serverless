@@ -2,11 +2,14 @@ const AWS = require("aws-sdk");
 
 const docClient = new AWS.DynamoDB.DocumentClient();
 module.exports.read = async (event) => {
+
+    const {Postid} = event.pathParameters;
+    console.log(event.pathParameters)
     try {
       const params = {
         TableName: "Blogposts",
         Key: {
-          postId: event.postid,
+          postId: Postid,
         },
       };
   
@@ -24,6 +27,7 @@ module.exports.read = async (event) => {
         };
       }
     } catch (error) {
+console.log(error);
       return {
         statusCode: 500,
         body: JSON.stringify({ error: "Failed to retrieve blog post" }),

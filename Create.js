@@ -4,6 +4,7 @@ const docClient = new AWS.DynamoDB.DocumentClient();
 
 module.exports.create = async (event) => {
     const data = JSON.parse(event.body);
+    console.log(data)
   try {
     // Define the DynamoDB parameters for putting an item
 

@@ -27,7 +27,7 @@ module.exports.read = async (event) => {
         };
       }
     } catch (error) {
-console.log(error);
+// console.log(error);
       return {
         statusCode: 500,
         body: JSON.stringify({ error: "Failed to retrieve blog post" }),

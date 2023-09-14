@@ -21,9 +21,9 @@ describe("Lambda Function Tests", function () {
     const event = {
       body: JSON.stringify({
         postid: "1",
-        author: "",
-        content: "",
-        title: "",
+        author: "d",
+        content: "d",
+        title: "d",
         // postid: gf,
         // author: fd,
         // content: td,
@@ -47,10 +47,10 @@ describe("Lambda Function Tests", function () {
   it("should handle errors when creating a blog post", async function () {
     const event = {
       body: JSON.stringify({
-        // postid: gf,
-        // author: fd,
-        // content: td,
-        // title: jhj,
+        postid: 1,
+        author: ad,
+        content: 1,
+        title: 1,
         // postid: "1",
         // author: "",
         // content: "",
